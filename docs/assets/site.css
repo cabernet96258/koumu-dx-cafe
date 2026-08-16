@@ -164,7 +164,7 @@ main { position: relative; z-index: 1; }
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 7px;
   margin-right: auto;
   font-size: 16px;
   letter-spacing: .08em;
@@ -174,7 +174,7 @@ main { position: relative; z-index: 1; }
 .nav-brand svg { flex: none; }
 .nav-brand-icon {
   flex: none;
-  height: 20px;
+  height: 24px;
   width: auto;
 }
 .site-nav {
