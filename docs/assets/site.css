@@ -167,6 +167,11 @@ main { position: relative; z-index: 1; }
   text-decoration: none;
 }
 .nav-brand svg { flex: none; }
+.nav-brand-icon {
+  flex: none;
+  height: 28px;
+  width: auto;
+}
 .site-nav {
   display: flex;
   align-items: center;
