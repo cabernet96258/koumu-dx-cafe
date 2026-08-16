@@ -31,6 +31,17 @@
     return "夜おそくまでおつかれさまです";
   }
 
+  function lockRestHeight(msg) {
+    var current = msg.textContent;
+    var maxH = 0;
+    for (var k = 0; k < RESTS.length; k++) {
+      msg.textContent = RESTS[k];
+      if (msg.scrollHeight > maxH) maxH = msg.scrollHeight;
+    }
+    msg.textContent = current;
+    msg.style.minHeight = maxH + "px";
+  }
+
   function startRestBar() {
     var msg = document.querySelector("[data-rest-msg]");
     var greet = document.querySelector("[data-rest-greeting]");
@@ -40,6 +51,20 @@
     var i = 0;
     msg.textContent = RESTS[0];
     if (reduceMotion) return;
+
+    // The longest message can wrap to several lines on narrow screens; lock
+    // the tallest possible height up front so rotating messages never
+    // reflows the page. Re-measure on resize (wrapping depends on width)
+    // and once webfonts finish loading (metrics can shift after swap-in).
+    lockRestHeight(msg);
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { lockRestHeight(msg); }, 150);
+    });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { lockRestHeight(msg); });
+    }
 
     setInterval(function () {
       msg.style.opacity = "0";

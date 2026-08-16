@@ -771,14 +771,14 @@ main { position: relative; z-index: 1; }
   .tools-hero h1 { font-size: 30px; }
   .sec-title { font-size: 22px; }
   .sec-head-split { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
-  /* The message wraps to two lines on a narrow screen. Reserve both lines so
-     the 8-second rotation never changes the bar's height and shifts the page. */
+  /* The message can wrap to several lines on a narrow screen; site.js measures
+     the tallest RESTS entry and locks .rest-msg's min-height to it, so the
+     8-second rotation never changes the bar's height and shifts the page. */
   .rest-line { flex-wrap: wrap; row-gap: var(--space-2); }
   .rest-sep { display: none; }
   .rest-msg {
     flex-basis: 100%;
     white-space: normal;
     line-height: 1.9;
-    min-height: calc(1.9em * 2);
   }
 }
