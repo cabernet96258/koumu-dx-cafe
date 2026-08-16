@@ -3,6 +3,23 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ── watercolour ground fit ────────────────────────────────────────────
+     Each .wc-tile's viewBox (1440x900, landscape) is designed for the
+     desktop-width layout. On a narrow/tall phone viewport, "xMidYMid slice"
+     zooms into a thin center strip to cover the tall box, cropping out most
+     of the painted colour and leaving the wash almost invisible. The colour
+     fields are soft blurred blobs with no crisp edges, so switching to
+     "none" (non-uniform stretch, no cropping) reads as the same wash with
+     no visible distortion, while keeping every colour on screen. */
+
+  function fitWatercolorTiles() {
+    var mode = window.matchMedia("(max-width: 1119px)").matches ? "none" : "xMidYMid slice";
+    var tiles = document.querySelectorAll(".wc-tile");
+    for (var i = 0; i < tiles.length; i++) {
+      tiles[i].setAttribute("preserveAspectRatio", mode);
+    }
+  }
+
   /* ── きょうのひとやすみ ─────────────────────────────────────────────── */
 
   var RESTS = [
@@ -251,6 +268,9 @@
       o.addEventListener("click", function () { apply(o.dataset.filter); });
     });
   }
+
+  fitWatercolorTiles();
+  window.addEventListener("resize", fitWatercolorTiles);
 
   startRestBar();
   startReveal();
