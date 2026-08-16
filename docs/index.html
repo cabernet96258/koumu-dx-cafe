@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>おのじゅんの校務DXカフェ</title>
+<meta name="description" content="現職の小学校教員がつくる、校務のためのちいさな道具置き場。成績処理・時間割・日々のこまごまとした作業を助ける Excel と EXE のツールを無料で公開しています。">
+<link rel="stylesheet" href="assets/classical.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="page">
+
+  <svg width="0" height="0" class="defs" aria-hidden="true">
+    <defs>
+      <filter id="wc" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="4" seed="12" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="66" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feGaussianBlur in="d" stdDeviation="10"></feGaussianBlur>
+      </filter>
+      <filter id="wc2" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.014 0.008" numOctaves="4" seed="31" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="62" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+        <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+      </filter>
+      <filter id="paper">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="9"></feTurbulence>
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      </filter>
+      <radialGradient id="gOchre"><stop offset="0%" stop-color="#c99a4e" stop-opacity=".5"></stop><stop offset="55%" stop-color="#c99a4e" stop-opacity=".22"></stop><stop offset="100%" stop-color="#c99a4e" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gSepia"><stop offset="0%" stop-color="#9a8a72" stop-opacity=".38"></stop><stop offset="60%" stop-color="#9a8a72" stop-opacity=".16"></stop><stop offset="100%" stop-color="#9a8a72" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gSage"><stop offset="0%" stop-color="#8fa08c" stop-opacity=".34"></stop><stop offset="60%" stop-color="#8fa08c" stop-opacity=".14"></stop><stop offset="100%" stop-color="#8fa08c" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gDusk"><stop offset="0%" stop-color="#8c93a8" stop-opacity=".32"></stop><stop offset="60%" stop-color="#8c93a8" stop-opacity=".13"></stop><stop offset="100%" stop-color="#8c93a8" stop-opacity="0"></stop></radialGradient>
+    </defs>
+  </svg>
+
+  <div class="wc-bg" aria-hidden="true">
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(0,0)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(1440,-120) scale(-1,1)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(0,90) rotate(180,720,450)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <canvas class="wc-particles" aria-hidden="true"></canvas>
+
+  <div class="paper" aria-hidden="true">
+    <svg width="100%" height="100%"><rect width="100%" height="100%" filter="url(#paper)"></rect></svg>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><g filter="url(#wc2)"><circle cx="20" cy="20" r="13" fill="url(#gOchre)"></circle></g><circle cx="20" cy="20" r="11" fill="none" stroke="var(--color-accent)" stroke-width=".9" stroke-opacity=".7"></circle></svg>
+        おのじゅんの校務DXカフェ
+      </a>
+      <nav class="site-nav">
+        <a class="lnk" href="index.html">ホーム</a>
+        <a class="lnk" href="tools.html">ツール一覧</a>
+        <a class="lnk" href="#about">このサイトについて</a>
+        <span class="lnk">利用規約</span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-bleed">
+      <img class="hero-coffee" src="assets/coffee.png" alt="" aria-hidden="true" width="880" height="657">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="hero-rule"></span>
+            <span>SCHOOL WORK TOOLS</span>
+          </div>
+          <p class="hero-lede">現職の小学校教員が、放課後にこつこつ作った Excel と EXE のツールです。成績処理、時間割、日々のこまごまとした作業に。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tools.html">ツール一覧を見る</a>
+            <a class="lnk" href="#about">このサイトについて</a>
+          </div>
+        </div>
+        <h1 class="hero-tagline">仕事を楽しむこと、<br>それがいちばんの働き方改革。</h1>
+      </div>
+      <div class="rest-bar">
+        <div class="wrap">
+          <span class="rest-greeting" data-rest-greeting></span>
+          <div class="rest-line">
+            <span class="rest-label">きょうのひとやすみ</span>
+            <span class="rest-sep"></span>
+            <span class="rest-msg" data-rest-msg>コーヒーが冷めないうちに、ひと息どうぞ。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap stack" data-reveal>
+      <div class="sec-head sec-head-split">
+        <div>
+          <h2 class="sec-title">まずは、この三つから</h2>
+          <span class="kicker">PICK UP</span>
+        </div>
+        <a class="lnk sec-more" href="tools.html">すべてのツールを見る</a>
+      </div>
+      <div class="pick-grid">
+        <div class="pick-card">
+          <div class="pick-meta tnum">01 — Excel</div>
+          <h3>テスト集計システム</h3>
+          <p>単元テストと観点別評価を一枚にまとめ、評定の目安まで算出します。学級の人数に合わせて行を増やせます。</p>
+          <a class="lnk pick-more" href="tools.html">詳しく見る</a>
+        </div>
+        <div class="pick-card">
+          <div class="pick-meta tnum">02 — EXE</div>
+          <h3>ジカンワリプロトコル</h3>
+          <p>担当教科と空き時間の条件を入力すると、成立する時間割の候補を並べます。手直し前提の下書き用です。</p>
+          <a class="lnk pick-more" href="tools.html">詳しく見る</a>
+        </div>
+        <div class="pick-card">
+          <div class="pick-meta tnum">05 — EXE</div>
+          <h3>ふせんツール</h3>
+          <p>画面のすみに小さなふせんを貼っておけます。色で分掌ごとに分けられ、再起動しても残ります。</p>
+          <a class="lnk pick-more" href="tools.html">詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap stack" data-reveal>
+      <div class="sec-head">
+        <h2 class="sec-title">カテゴリからさがす</h2>
+        <span class="kicker">CATEGORY</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="tools.html">
+          <div class="cat-num tnum">01</div>
+          <h3>成績・指導要録関連</h3>
+          <p>所見の下書きから評定の集計まで。学期末に一度に押し寄せる仕事のための道具です。</p>
+          <div class="cat-count tnum">ツール 1 個</div>
+        </a>
+        <a class="cat-card" href="tools.html">
+          <div class="cat-num tnum">02</div>
+          <h3>時間割・教科担任制</h3>
+          <p>交換授業や専科の割り振りで、パズルのようになってしまう時間割まわりを整えます。</p>
+          <div class="cat-count tnum">ツール 1 個</div>
+        </a>
+        <a class="cat-card" href="tools.html">
+          <div class="cat-num tnum">03</div>
+          <h3>汎用業務効率化</h3>
+          <p>毎日ほんの少し面倒なこと。積み上がると大きいので、まとめて片付けます。</p>
+          <div class="cat-count tnum">ツール 4 個</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-bleed about" id="about" data-reveal>
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 class="sec-title">このサイトについて</h2>
+          <span class="kicker">ABOUT</span>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="about-motto">「楽しく仕事ができる」ことが、<br>いちばんの働き方改革だと<br>思っています。</p>
+            <span class="about-rule"></span>
+          </div>
+          <div class="about-cols">
+            <div>
+              <p>現職の小学校教員です。担任をしながら、放課後や休日に少しずつ道具を作っています。所属校や地域は伏せていますが、どれも目の前の職員室で本当に困ったことから生まれたものです。</p>
+              <p>辛いから効率化する、という考え方はとっていません。早く職員室を出られた日には、教材をゆっくり考えたり、子どもの話を最後まで聞けたりします。そのための時間をすこし取り戻す道具として使っていただければ十分です。</p>
+            </div>
+            <div>
+              <p>どのツールも Excel か Windows 用の EXE です。校務用端末の環境は学校ごとに違いますので、うまく動かないこともあります。使い勝手の悪いところも、正直に書くようにしています。合わなければ使わない、という判断もどうぞ遠慮なく。</p>
+              <p>不具合の報告やご要望は X のDM・リプライで受け付けています。返信はゆっくりですが、必ず読んでいます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap safety" data-reveal>
+      <div class="sec-head">
+        <h2 class="sec-title">安心して使うために</h2>
+        <span class="kicker">SAFETY</span>
+      </div>
+      <div class="safety-grid">
+        <div>
+          <h4>GitHub Releases から配布</h4>
+          <p>ダウンロードボタンは公開リポジトリのリリースページへ進みます。誰がいつ公開したファイルかが記録として残ります。</p>
+        </div>
+        <div>
+          <h4>ウイルススキャン結果</h4>
+          <p>自作の EXE は対策ソフトに誤検知されることがあります。各ツールのページに VirusTotal の結果へのリンクを掲載しています。</p>
+        </div>
+        <div>
+          <h4>自己責任でのご利用</h4>
+          <p>校務データを扱う前に必ずバックアップをお願いします。責任の範囲は利用規約に記載しています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-bleed request" data-reveal>
+      <div class="wrap">
+        <span class="kicker">REQUEST</span>
+        <h2>「こういう道具が欲しい」も歓迎です</h2>
+        <p>同じことで困っている先生は、きっと他にもいます。<br>今日も、おつかれさまでした。</p>
+        <!-- TODO: X のプロフィール URL に差し替え -->
+        <a class="btn btn-primary" href="#">X で相談する</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">おのじゅんの校務DXカフェ</div>
+          <p>現職小学校教員がつくる、校務のためのちいさな道具置き場。</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">SITE</div>
+          <a class="lnk" href="index.html">ホーム</a>
+          <a class="lnk" href="tools.html">ツール一覧</a>
+          <span class="lnk">更新情報</span>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">CATEGORY</div>
+          <a class="lnk" href="tools.html">成績・指導要録</a>
+          <a class="lnk" href="tools.html">時間割・教科担任制</a>
+          <a class="lnk" href="tools.html">汎用業務効率化</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">OTHER</div>
+          <a class="lnk" href="#about">このサイトについて</a>
+          <span class="lnk">利用規約・免責事項</span>
+          <span class="lnk">X</span>
+        </div>
+      </div>
+      <div class="wrap footer-legal tnum">© 2026 おのじゅんの校務DXカフェ</div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

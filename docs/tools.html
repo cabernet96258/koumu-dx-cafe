@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ツール一覧 — おのじゅんの校務DXカフェ</title>
+<meta name="description" content="Excel ファイルはそのまま、EXE は GitHub Releases からダウンロードいただけます。すべて無料・登録不要です。">
+<link rel="stylesheet" href="assets/classical.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="page">
+
+  <svg width="0" height="0" class="defs" aria-hidden="true">
+    <defs>
+      <filter id="wc" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="4" seed="12" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="66" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
+        <feGaussianBlur in="d" stdDeviation="10"></feGaussianBlur>
+      </filter>
+      <filter id="wc2" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.014 0.008" numOctaves="4" seed="31" result="n"></feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="62" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+        <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+      </filter>
+      <filter id="paper">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="9"></feTurbulence>
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      </filter>
+      <radialGradient id="gOchre"><stop offset="0%" stop-color="#c99a4e" stop-opacity=".5"></stop><stop offset="55%" stop-color="#c99a4e" stop-opacity=".22"></stop><stop offset="100%" stop-color="#c99a4e" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gSepia"><stop offset="0%" stop-color="#9a8a72" stop-opacity=".38"></stop><stop offset="60%" stop-color="#9a8a72" stop-opacity=".16"></stop><stop offset="100%" stop-color="#9a8a72" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gSage"><stop offset="0%" stop-color="#8fa08c" stop-opacity=".34"></stop><stop offset="60%" stop-color="#8fa08c" stop-opacity=".14"></stop><stop offset="100%" stop-color="#8fa08c" stop-opacity="0"></stop></radialGradient>
+      <radialGradient id="gDusk"><stop offset="0%" stop-color="#8c93a8" stop-opacity=".32"></stop><stop offset="60%" stop-color="#8c93a8" stop-opacity=".13"></stop><stop offset="100%" stop-color="#8c93a8" stop-opacity="0"></stop></radialGradient>
+    </defs>
+  </svg>
+
+  <div class="wc-bg" aria-hidden="true">
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(0,0)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(1440,-120) scale(-1,1)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+    <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(0,90) rotate(180,720,450)">
+        <g data-depth="0.10" filter="url(#wc)">
+          <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.22" filter="url(#wc2)">
+          <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
+          <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
+          <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
+        </g>
+        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+          <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
+          <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <canvas class="wc-particles" aria-hidden="true"></canvas>
+
+  <div class="paper" aria-hidden="true">
+    <svg width="100%" height="100%"><rect width="100%" height="100%" filter="url(#paper)"></rect></svg>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">
+        <svg width="26" height="26" viewBox="0 0 40 40" aria-hidden="true"><g filter="url(#wc2)"><circle cx="20" cy="20" r="13" fill="url(#gOchre)"></circle></g><circle cx="20" cy="20" r="11" fill="none" stroke="var(--color-accent)" stroke-width=".9" stroke-opacity=".7"></circle></svg>
+        おのじゅんの校務DXカフェ
+      </a>
+      <nav class="site-nav">
+        <a class="lnk" href="index.html">ホーム</a>
+        <a class="lnk" href="tools.html" aria-current="page">ツール一覧</a>
+        <a class="lnk" href="index.html#about">このサイトについて</a>
+        <span class="lnk">利用規約</span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-bleed tools-hero">
+      <div class="wrap">
+        <div class="crumb">ホーム / ツール一覧</div>
+        <h1>ツール一覧</h1>
+        <p>Excel ファイルはそのまま、EXE は GitHub Releases からダウンロードいただけます。すべて無料・登録不要です。</p>
+      </div>
+    </section>
+
+    <section class="filter-bar" data-filter-bar>
+      <div class="wrap">
+        <div class="filter-opts">
+          <button type="button" class="filter-opt" data-filter="すべて" aria-pressed="true">すべて</button>
+          <button type="button" class="filter-opt" data-filter="成績・指導要録関連" aria-pressed="false">成績・指導要録関連</button>
+          <button type="button" class="filter-opt" data-filter="時間割・教科担任制" aria-pressed="false">時間割・教科担任制</button>
+          <button type="button" class="filter-opt" data-filter="汎用業務効率化" aria-pressed="false">汎用業務効率化</button>
+        </div>
+        <div class="filter-count tnum" data-filter-count aria-live="polite">6 個のツール</div>
+      </div>
+    </section>
+
+    <section class="section wrap tools-section">
+      <div class="tools-grid">
+        <div class="tool-card" data-cat="成績・指導要録">
+          <div class="tool-meta">
+            <span class="tool-num tnum">01</span>
+            <span class="tool-kind">Excel · v2.1</span>
+            <span class="tool-cat">成績・指導要録</span>
+          </div>
+          <h3>テスト集計システム</h3>
+          <p>単元テストと観点別評価を一枚にまとめ、評定の目安まで算出します。学級の人数に合わせて行を増やせます。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+
+        <div class="tool-card" data-cat="時間割・教科担任制">
+          <div class="tool-meta">
+            <span class="tool-num tnum">02</span>
+            <span class="tool-kind">EXE · v1.2</span>
+            <span class="tool-cat">時間割・教科担任制</span>
+          </div>
+          <h3>ジカンワリプロトコル</h3>
+          <p>担当教科と空き時間の条件を入力すると、成立する時間割の候補を並べます。手直し前提の下書き用です。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+
+        <div class="tool-card" data-cat="汎用業務効率化">
+          <div class="tool-meta">
+            <span class="tool-num tnum">03</span>
+            <span class="tool-kind">EXE · v1.3</span>
+            <span class="tool-cat">汎用業務効率化</span>
+          </div>
+          <h3>PDFパレット</h3>
+          <p>配布資料の PDF を放り込んで並べ替えるだけで一つに連結します。ページの抜き取りにも対応しています。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+
+        <div class="tool-card" data-cat="汎用業務効率化">
+          <div class="tool-meta">
+            <span class="tool-num tnum">04</span>
+            <span class="tool-kind">EXE · v1.0</span>
+            <span class="tool-cat">汎用業務効率化</span>
+          </div>
+          <h3>フォルダツリーメーカー</h3>
+          <p>学年・学級・分掌のフォルダ構成を一括で作成します。前年度の構成をそのまま引き継げます。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+
+        <div class="tool-card" data-cat="汎用業務効率化">
+          <div class="tool-meta">
+            <span class="tool-num tnum">05</span>
+            <span class="tool-kind">EXE · v1.4</span>
+            <span class="tool-cat">汎用業務効率化</span>
+          </div>
+          <h3>ふせんツール</h3>
+          <p>画面のすみに小さなふせんを貼っておけます。色で分掌ごとに分けられ、再起動しても残ります。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+
+        <div class="tool-card" data-cat="汎用業務効率化">
+          <div class="tool-meta">
+            <span class="tool-num tnum">06</span>
+            <span class="tool-kind">EXE · v2.0</span>
+            <span class="tool-cat">汎用業務効率化</span>
+          </div>
+          <h3>スクリーンペン</h3>
+          <p>投影中の画面にそのまま書き込めます。授業中のちょっとした強調や、資料の説明に。</p>
+          <div class="tool-actions">
+            <!-- TODO: GitHub Releases の URL に差し替え -->
+            <a class="btn btn-primary" href="#">ダウンロード</a>
+            <span class="lnk tool-howto">使い方</span>
+            <!-- TODO: VirusTotal のスキャン結果 URL に差し替え -->
+            <a class="lnk tool-scan" href="#">スキャン結果</a>
+          </div>
+          <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap tools-cta">
+      <div>
+        <h3>「こういう道具が欲しい」も歓迎です</h3>
+        <p>X のDM・リプライで受け付けています。同じことで困っている先生は、きっと他にもいます。</p>
+      </div>
+      <!-- TODO: X のプロフィール URL に差し替え -->
+      <a class="btn btn-primary" href="#">X で相談する</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <div class="wrap footer-grid">
+        <div>
+          <div class="footer-brand">おのじゅんの校務DXカフェ</div>
+          <p>現職小学校教員がつくる、校務のためのちいさな道具置き場。</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">SITE</div>
+          <a class="lnk" href="index.html">ホーム</a>
+          <a class="lnk" href="tools.html">ツール一覧</a>
+          <span class="lnk">更新情報</span>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">CATEGORY</div>
+          <a class="lnk" href="tools.html">成績・指導要録</a>
+          <a class="lnk" href="tools.html">時間割・教科担任制</a>
+          <a class="lnk" href="tools.html">汎用業務効率化</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">OTHER</div>
+          <a class="lnk" href="index.html#about">このサイトについて</a>
+          <span class="lnk">利用規約・免責事項</span>
+          <span class="lnk">X</span>
+        </div>
+      </div>
+      <div class="wrap footer-legal tnum">© 2026 おのじゅんの校務DXカフェ</div>
+    </div>
+  </footer>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
