@@ -17,16 +17,6 @@
 
   <svg width="0" height="0" class="defs" aria-hidden="true">
     <defs>
-      <filter id="wc" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="4" seed="12" result="n"></feTurbulence>
-        <feDisplacementMap in="SourceGraphic" in2="n" scale="66" xChannelSelector="R" yChannelSelector="G" result="d"></feDisplacementMap>
-        <feGaussianBlur in="d" stdDeviation="10"></feGaussianBlur>
-      </filter>
-      <filter id="wc2" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.014 0.008" numOctaves="4" seed="31" result="n"></feTurbulence>
-        <feDisplacementMap in="SourceGraphic" in2="n" scale="62" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-        <feGaussianBlur stdDeviation="12"></feGaussianBlur>
-      </filter>
       <filter id="paper">
         <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="9"></feTurbulence>
         <feColorMatrix type="saturate" values="0"></feColorMatrix>
@@ -41,17 +31,17 @@
   <div class="wc-bg" aria-hidden="true">
     <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
       <g transform="translate(0,0)">
-        <g data-depth="0.10" filter="url(#wc)">
+        <g data-depth="0.10">
           <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
           <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
           <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.22" filter="url(#wc2)">
+        <g data-depth="0.22">
           <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
           <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
           <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+        <g data-depth="0.36" opacity=".75">
           <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
           <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
         </g>
@@ -59,17 +49,17 @@
     </svg>
     <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
       <g transform="translate(1440,-120) scale(-1,1)">
-        <g data-depth="0.10" filter="url(#wc)">
+        <g data-depth="0.10">
           <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
           <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
           <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.22" filter="url(#wc2)">
+        <g data-depth="0.22">
           <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
           <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
           <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+        <g data-depth="0.36" opacity=".75">
           <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
           <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
         </g>
@@ -77,17 +67,17 @@
     </svg>
     <svg class="wc-tile" width="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
       <g transform="translate(0,90) rotate(180,720,450)">
-        <g data-depth="0.10" filter="url(#wc)">
+        <g data-depth="0.10">
           <ellipse cx="1120" cy="180" rx="470" ry="320" fill="url(#gOchre)"></ellipse>
           <ellipse cx="200" cy="520" rx="440" ry="300" fill="url(#gSepia)"></ellipse>
           <ellipse cx="760" cy="820" rx="520" ry="260" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.22" filter="url(#wc2)">
+        <g data-depth="0.22">
           <ellipse cx="620" cy="120" rx="330" ry="180" fill="url(#gDusk)"></ellipse>
           <ellipse cx="1300" cy="620" rx="360" ry="240" fill="url(#gOchre)"></ellipse>
           <ellipse cx="380" cy="240" rx="260" ry="160" fill="url(#gSage)"></ellipse>
         </g>
-        <g data-depth="0.36" filter="url(#wc2)" opacity=".75">
+        <g data-depth="0.36" opacity=".75">
           <ellipse cx="980" cy="420" rx="300" ry="200" fill="url(#gSepia)"></ellipse>
           <ellipse cx="120" cy="820" rx="280" ry="180" fill="url(#gDusk)"></ellipse>
         </g>

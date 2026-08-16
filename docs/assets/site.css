@@ -79,6 +79,11 @@ a:hover { color: var(--color-accent-600); }
   display: block;
   overflow: visible;
   animation: om-tile 72s ease-in-out infinite;
+  /* A plain CSS blur, not an SVG <feTurbulence>/<feDisplacementMap> filter:
+     iOS Safari frequently fails to paint that filter chain when it sits on
+     a <g> inside an animated/transformed SVG, leaving the wash invisible
+     there while it renders fine elsewhere. CSS blur has none of that risk. */
+  filter: blur(48px);
 }
 
 .wc-particles {
