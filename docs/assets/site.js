@@ -62,14 +62,23 @@
     msg.style.minHeight = maxH + "px";
   }
 
+  function randomRestIndex(excludeIndex) {
+    if (RESTS.length <= 1) return 0;
+    var idx;
+    do {
+      idx = Math.floor(Math.random() * RESTS.length);
+    } while (idx === excludeIndex);
+    return idx;
+  }
+
   function startRestBar() {
     var msg = document.querySelector("[data-rest-msg]");
     var greet = document.querySelector("[data-rest-greeting]");
     if (greet) greet.textContent = greeting();
     if (!msg) return;
 
-    var i = 0;
-    msg.textContent = RESTS[0];
+    var i = randomRestIndex(-1);
+    msg.textContent = RESTS[i];
     if (reduceMotion) return;
 
     // The longest message can wrap to several lines on narrow screens; lock
@@ -89,7 +98,7 @@
     setInterval(function () {
       msg.style.opacity = "0";
       setTimeout(function () {
-        i = (i + 1) % RESTS.length;
+        i = randomRestIndex(i);
         msg.textContent = RESTS[i];
         msg.style.opacity = "1";
       }, 800);
