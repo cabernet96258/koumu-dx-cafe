@@ -651,6 +651,12 @@ main { position: relative; z-index: 1; }
    .paper(60)より下に沈んでしまうため、ここで最前面になるよう明示する。 */
 .dialog-backdrop { z-index: 100; }
 .dialog-backdrop[hidden] { display: none; }
+/* 使い方ダイアログはスクリーンショットが縦長で、低い画面だと本文ごと
+   ビューポートからはみ出すため、ダイアログ自体をスクロール可能にする。 */
+.dialog-backdrop .dialog {
+  max-height: calc(100vh - var(--space-4) * 2);
+  overflow-y: auto;
+}
 .dialog-body .howto-img {
   display: block;
   max-width: 100%;
