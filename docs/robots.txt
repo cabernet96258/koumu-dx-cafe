@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cabernet96258.github.io/koumu-dx-cafe/sitemap.xml
