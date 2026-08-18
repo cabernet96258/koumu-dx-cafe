@@ -281,6 +281,54 @@
     });
   }
 
+  /* ── 使い方ダイアログ ──────────────────────────────────────────────── */
+
+  function startHowtoDialogs() {
+    var backdrop = document.getElementById("howto-dialog");
+    if (!backdrop) return;
+    var content = backdrop.querySelector("[data-howto-content]");
+    var closeBtn = backdrop.querySelector("[data-howto-close]");
+    var lastTrigger = null;
+
+    function onKeydown(e) {
+      if (e.key === "Escape") close();
+    }
+
+    function open(trigger) {
+      var tpl = document.getElementById("howto-" + trigger.dataset.howto);
+      if (!tpl) return;
+      content.innerHTML = "";
+      content.appendChild(tpl.content.cloneNode(true));
+      var title = content.querySelector(".dialog-title");
+      if (title) title.id = "howto-dialog-title";
+      lastTrigger = trigger;
+      backdrop.hidden = false;
+      closeBtn.focus();
+      document.addEventListener("keydown", onKeydown);
+    }
+
+    function close() {
+      backdrop.hidden = true;
+      document.removeEventListener("keydown", onKeydown);
+      if (lastTrigger) lastTrigger.focus();
+    }
+
+    document.querySelectorAll(".tool-howto[data-howto]").forEach(function (el) {
+      el.addEventListener("click", function () { open(el); });
+      el.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open(el);
+        }
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+    backdrop.addEventListener("click", function (e) {
+      if (e.target === backdrop) close();
+    });
+  }
+
   fitWatercolorTiles();
   window.addEventListener("resize", fitWatercolorTiles);
 
@@ -289,4 +337,5 @@
   startDrift();
   startParticles();
   startFilter();
+  startHowtoDialogs();
 })();
