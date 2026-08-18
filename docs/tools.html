@@ -149,7 +149,7 @@
           <p>単元テストの点数を入力するだけで、観点別評価から評定まで自動で出せるExcelシステムです。10教科・前後期に対応。評定への換算ラインは、教科ごとに自由に設定できます。指導要録の作成まで一続きで行えます。担当している学級の数だけダウンロードするか、コピーしてお使いください。</p>
           <div class="tool-actions">
             <a class="btn btn-primary" href="https://github.com/cabernet96258/koumu-dx-cafe/releases/download/%E3%83%86%E3%82%B9%E3%83%88%E9%9B%86%E8%A8%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/test_shukeisystem.ver.3.2.0.xlsm">ダウンロード</a>
-            <span class="lnk tool-howto">使い方</span>
+            <span class="lnk tool-howto" data-howto="test-shukei" role="button" tabindex="0">使い方</span>
           </div>
           <div class="tool-note">ご利用は自己責任でお願いします。作業前にバックアップを。</div>
         </div>
@@ -288,6 +288,30 @@
       <div class="wrap footer-legal tnum">© 2026 おのじゅんの校務DXカフェ</div>
     </div>
   </footer>
+
+  <!-- 「使い方」ダイアログ。中身は各ツールの howto-* テンプレートから複製する -->
+  <div class="dialog-backdrop" id="howto-dialog" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="howto-dialog-title">
+      <div data-howto-content></div>
+      <div class="dialog-actions">
+        <button type="button" class="btn" data-howto-close>閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <template id="howto-test-shukei">
+    <h3 class="dialog-title">マクロが有効にならないときは</h3>
+    <div class="dialog-body">
+      <p>ダウンロードしたファイルは、Windowsのセキュリティ機能により、はじめはマクロがブロックされた状態になっています。次の手順で解除してからお使いください。</p>
+      <ol>
+        <li>ダウンロードしたファイルを右クリックして「プロパティ」を開く</li>
+        <li>「全般」タブの一番下、「セキュリティ」欄にある「許可する」にチェックを入れる</li>
+        <li>「OK」を押してからファイルを開く</li>
+      </ol>
+      <img class="howto-img" src="assets/howto/test-shukei-security.png" alt="ファイルのプロパティ画面。全般タブ下部のセキュリティ欄にある「許可する」にチェックを入れている様子">
+      <p class="howto-note">※ この操作はお使いのPCに保存したファイルの制限を解除するだけです。ファイルの中身が変わることはないので、安心して行ってください。</p>
+    </div>
+  </template>
 </div>
 
 <script src="assets/site.js"></script>
