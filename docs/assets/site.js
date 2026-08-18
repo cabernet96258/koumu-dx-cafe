@@ -313,7 +313,7 @@
       if (lastTrigger) lastTrigger.focus();
     }
 
-    document.querySelectorAll(".tool-howto[data-howto]").forEach(function (el) {
+    document.querySelectorAll("[data-howto]").forEach(function (el) {
       el.addEventListener("click", function () { open(el); });
       el.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {

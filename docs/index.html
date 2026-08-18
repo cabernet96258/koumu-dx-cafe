@@ -111,7 +111,7 @@
         <a class="lnk" href="index.html">ホーム</a>
         <a class="lnk" href="tools.html">ツール一覧</a>
         <a class="lnk" href="#about">このサイトについて</a>
-        <span class="lnk">利用規約</span>
+        <span class="lnk" data-howto="terms" role="button" tabindex="0">利用規約</span>
       </nav>
     </div>
   </header>
@@ -281,13 +281,34 @@
         <div class="footer-col">
           <div class="footer-col-head">OTHER</div>
           <a class="lnk" href="#about">このサイトについて</a>
-          <span class="lnk">利用規約・免責事項</span>
+          <span class="lnk" data-howto="terms" role="button" tabindex="0">利用規約・免責事項</span>
           <span class="lnk">X</span>
         </div>
       </div>
       <div class="wrap footer-legal tnum">© 2026 おのじゅんの校務DXカフェ</div>
     </div>
   </footer>
+
+  <!-- 「使い方」等のダイアログ。中身は howto-* テンプレートから複製する -->
+  <div class="dialog-backdrop" id="howto-dialog" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="howto-dialog-title">
+      <div data-howto-content></div>
+      <div class="dialog-actions">
+        <button type="button" class="btn" data-howto-close>閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <template id="howto-terms">
+    <h3 class="dialog-title">利用規約・免責事項</h3>
+    <div class="dialog-body">
+      <p>本サイトで配布しているツールは、現職の小学校教員が個人で開発したものです。すべて無料で、会員登録なしでご利用いただけます。</p>
+      <p>ご利用は自己責任でお願いします。データを扱うツールは、作業前に必ずバックアップを取ってください。ツールの利用によって生じたいかなる損害についても、作成者は責任を負いかねます。</p>
+      <p>校務用端末の環境は学校ごとに異なるため、正常に動作しない場合があります。あらかじめご了承ください。</p>
+      <p>不具合のご報告や「こういう道具が欲しい」というご要望は、X のDM・リプライで受け付けています。</p>
+      <p class="howto-note">※ 予告なくツールの内容やダウンロードURLを変更・終了する場合があります。</p>
+    </div>
+  </template>
 </div>
 
 <script src="assets/site.js"></script>
