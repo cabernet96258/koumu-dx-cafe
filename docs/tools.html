@@ -193,15 +193,14 @@
         <div class="tool-card" data-cat="汎用業務効率化">
           <div class="tool-meta">
             <span class="tool-num tnum">04</span>
-            <span class="tool-kind">EXE · v1.0</span>
+            <span class="tool-kind">EXE · v2.0.2</span>
             <span class="tool-cat">汎用業務効率化</span>
           </div>
           <h3>フォルダツリーメーカー</h3>
-          <p>学年・学級・分掌のフォルダ構成を一括で作成します。前年度の構成をそのまま引き継げます。</p>
+          <p>新年度のフォルダ作り、去年と同じ構成を手作業で作り直していませんか。フォルダツリーメーカーは、既存フォルダの「階層だけ」を読み取り、必要なものを選ぶだけで同じ構成を作り直します。ファイルは一切コピーしないので、共有フォルダでも安心して使えます。</p>
           <div class="tool-actions">
-            <!-- TODO: GitHub Releases の URL に差し替え -->
-            <a class="btn btn-primary" href="#">ダウンロード</a>
-            <span class="lnk tool-howto">使い方</span>
+            <a class="btn btn-primary" href="https://github.com/cabernet96258/koumu-dx-cafe/releases/download/%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%84%E3%83%AA%E3%83%BC%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC/FoldertreeMaker_setup_v2.0.2.exe">ダウンロード</a>
+            <span class="lnk tool-howto" data-howto="foldertree" role="button" tabindex="0">使い方</span>
             <!-- TODO: VirusTotal のスキャン結果 URL に差し替え(公開まで非表示)
             <a class="lnk tool-scan" href="#">スキャン結果</a>
             -->
@@ -311,6 +310,18 @@
     </div>
   </template>
 
+  <template id="howto-foldertree">
+    <h3 class="dialog-title">フォルダツリーメーカーの使い方</h3>
+    <div class="dialog-body">
+      <ol>
+        <li><strong>元にするフォルダを選ぶ</strong><br>「フォルダを選ぶ」を押して、お手本にしたいフォルダを指定します。中の階層が一覧に表示されます。</li>
+        <li><strong>作る場所と名前を決める</strong><br>どこに、どんな名前で作るかを指定します。作成先のパスが画面に表示されるので、実行する前に確認できます。</li>
+        <li><strong>必要なフォルダを選ぶ</strong><br>一覧をクリックしてチェックします。</li>
+        <li><strong>「フォルダを作成する」を押す</strong><br>選んだフォルダだけが作られます。中のファイルはコピーされません。</li>
+      </ol>
+    </div>
+  </template>
+
   <template id="howto-screennote">
     <h3 class="dialog-title">スクリーンノートの使い方</h3>
     <div class="dialog-body">
@@ -350,6 +361,7 @@
     <div class="dialog-body">
       <p><strong>2026-08-19</strong></p>
       <ul>
+        <li>フォルダツリーメーカーを公開しました</li>
         <li>スクリーンノート（旧スクリーンペン）を公開しました</li>
         <li>利用規約・免責事項を追加しました</li>
       </ul>
