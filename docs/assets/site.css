@@ -451,7 +451,9 @@ main { position: relative; z-index: 1; }
 .safety { padding-top: calc(var(--space-8) * 1.4); }
 .safety-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* ウイルススキャン結果の項目を index.html 側で一時的に非表示にしている
+     間は2列。再表示するときは repeat(3, 1fr) に戻す。 */
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
   border-top: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
